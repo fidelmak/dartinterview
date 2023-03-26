@@ -11,7 +11,9 @@ class _interviewState extends State<interview> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text('Interview'),
+      ),
       body: Center(
         child: TextButton(
           child: Text('go back to interview questions '),

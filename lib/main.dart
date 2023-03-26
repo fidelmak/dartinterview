@@ -12,6 +12,9 @@ class dartinterview extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Dartinterview',
+      theme: ThemeData(
+        fontFamily: 'Pacifico',
+      ),
       initialRoute: '/',
       routes: routes,
       home: home(),
