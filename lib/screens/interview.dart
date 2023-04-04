@@ -12,7 +12,8 @@ class _interviewState extends State<interview> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Interview'),
+        title: Text('Choose a stack ', style: TextStyle(color: Colors.blue)),
+        backgroundColor: Colors.white,
       ),
       body: Center(
         child: TextButton(
