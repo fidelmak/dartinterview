@@ -50,12 +50,17 @@ class _interviewState extends State<interview> {
                       fontFamily: 'SourceSansPro - Regular'),
                 ),
               ),
+              SizedBox(height: 10),
               Container(
-                width: 200,
-                child: TextButton(
-                  child: Text('Start',
+                width: 170,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.pink.shade900,
+                    shape: BeveledRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(5))),
+                  ),
+                  child: Text('Start the process here ',
                       style: TextStyle(
-                          backgroundColor: Colors.pink.shade900,
                           color: Colors.white,
                           fontFamily: 'SourceSansPro - Regular')),
                   onPressed: () {
