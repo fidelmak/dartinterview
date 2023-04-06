@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
+import './widgets.dart/slider.dart';
 
 class interview extends StatefulWidget {
   const interview({super.key});
@@ -11,41 +12,59 @@ class interview extends StatefulWidget {
 class _interviewState extends State<interview> {
   @override
   Widget build(BuildContext context) {
-    final List images = [
-      'images/sus1.svg',
-      'images/sus2.svg',
-      'images/sus3.svg',
-    ];
-
     return Scaffold(
-      backgroundColor: Colors.blue,
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text('Choose a stack ', style: TextStyle(color: Colors.blue)),
-        backgroundColor: Colors.white,
+        toolbarHeight: 40,
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/home');
+            },
+            icon: Icon(Icons.menu_book_rounded),
+          )
+        ],
+        title: Text('Choose a stack ', style: TextStyle(color: Colors.white)),
+        backgroundColor: Colors.pink.shade900,
         elevation: 0.0,
       ),
       body: Center(
-        child: Column(
-          children: [
-            Container(
-              height: 200,
-              child: PageView.builder(
-                itemCount: images.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return SvgPicture.asset(
-                    images[index],
-                    fit: BoxFit.contain,
-                  );
-                },
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 120.0),
+          child: Column(
+            children: [
+              slider(),
+              Text(
+                "WELCOME",
+                style: TextStyle(
+                    color: Colors.pink.shade900,
+                    fontFamily: 'SourceSansPro - Regular'),
               ),
-            ),
-            TextButton(
-              child: Text('go back to interview questions '),
-              onPressed: () {
-                Navigator.pop(context, '/home');
-              },
-            ),
-          ],
+              Container(
+                width: 200,
+                child: Text(
+                  " Practice answering common interview questions ",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Colors.pink.shade900,
+                      fontFamily: 'SourceSansPro - Regular'),
+                ),
+              ),
+              Container(
+                width: 200,
+                child: TextButton(
+                  child: Text('Start',
+                      style: TextStyle(
+                          backgroundColor: Colors.pink.shade900,
+                          color: Colors.white,
+                          fontFamily: 'SourceSansPro - Regular')),
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/home');
+                  },
+                ),
+              ),
+            ],
+          ),
         ),
       ),
 

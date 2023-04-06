@@ -5,7 +5,12 @@ import './screens/interview.dart';
 void main() => runApp(dartinterview());
 
 class dartinterview extends StatelessWidget {
-  const dartinterview({super.key});
+  dartinterview({super.key});
+
+  final myFonts = ThemeData.dark().textTheme.copyWith(
+        headline1: TextStyle(fontFamily: 'Pacifico'),
+        headline2: TextStyle(fontFamily: 'SourceSansPro-Regular'),
+      );
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +18,7 @@ class dartinterview extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Dartinterview',
       theme: ThemeData(
-        fontFamily: 'Pacifico',
+        textTheme: myFonts,
       ),
       initialRoute: '/',
       routes: routes,
