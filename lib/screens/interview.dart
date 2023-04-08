@@ -30,34 +30,41 @@ class _interviewState extends State<interview> {
       ),
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.symmetric(vertical: 120.0),
+          padding: const EdgeInsets.symmetric(vertical: 100.0),
           child: Column(
             children: [
               slider(),
+              SizedBox(height: 5),
               Text(
-                "WELCOME",
+                "Welcome",
                 style: TextStyle(
-                    color: Colors.pink.shade900,
-                    fontFamily: 'SourceSansPro - Regular'),
+                  color: Colors.pink.shade900,
+                  fontFamily: 'Pacifico',
+                  fontSize: 30,
+                ),
               ),
+              SizedBox(height: 5),
               Container(
                 width: 200,
                 child: Text(
                   " Practice answering common interview questions ",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      color: Colors.pink.shade900,
-                      fontFamily: 'SourceSansPro - Regular'),
+                    color: Color.fromARGB(122, 172, 66, 122),
+                    fontFamily: 'SourceSansPro - Regular',
+                    fontWeight: FontWeight.w200,
+                  ),
                 ),
               ),
               SizedBox(height: 10),
               Container(
                 width: 170,
+                height: 50,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     primary: Colors.pink.shade900,
-                    shape: BeveledRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(5))),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(50))),
                   ),
                   child: Text('Start the process here ',
                       style: TextStyle(
