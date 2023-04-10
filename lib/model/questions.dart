@@ -18,4 +18,34 @@ class Questions {
         choice: ['paul', 'ben'],
         questionAnswer: 'ben'),
   ];
+
+  int get total => questions.length;
+
+  void nextQuestion() {
+    if (_questionNumber < questions.length - 1) {
+      _questionNumber++;
+    }
+  }
+
+  String? getQuestionBank() {
+    return questions[_questionNumber].questionText;
+  }
+
+  String? getQuestinAnswer() {
+    return questions[_questionNumber].questionAnswer;
+  }
+
+  bool isFinished() {
+    if (_questionNumber >= questions.length - 1) {
+      print('Now returning true');
+
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  void reset() {
+    _questionNumber = 0;
+  }
 }
