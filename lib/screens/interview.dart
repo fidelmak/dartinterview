@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import './widgets.dart/slider.dart';
+import 'widgets/slider.dart';
 
 class interview extends StatefulWidget {
   const interview({super.key});
@@ -71,7 +71,7 @@ class _interviewState extends State<interview> {
                           color: Colors.white,
                           fontFamily: 'SourceSansPro - Regular')),
                   onPressed: () {
-                    Navigator.pushNamed(context, '/home');
+                    Navigator.pushNamed(context, '/questions');
                   },
                 ),
               ),

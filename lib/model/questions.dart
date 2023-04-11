@@ -35,6 +35,10 @@ class Questions {
     return questions[_questionNumber].questionAnswer;
   }
 
+  List<String> getChoicer() {
+    return questions[_questionNumber].choice;
+  }
+
   bool isFinished() {
     if (_questionNumber >= questions.length - 1) {
       print('Now returning true');

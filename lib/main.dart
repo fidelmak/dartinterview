@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './screens/homepage.dart';
 import './screens/interview.dart';
+import '/screens/display.dart';
 
 void main() => runApp(dartinterview());
 
@@ -31,4 +32,5 @@ Map<String, WidgetBuilder> routes = {
   '/home': (BuildContext context) => home(),
   //'/home2': (BuildContext context) => home(),
   '/interview': (BuildContext context) => interview(),
+  '/questions': (BuildContext context) => display(),
 };
