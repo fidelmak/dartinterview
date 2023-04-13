@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:dartinterview/model/questions.dart';
 
 class display extends StatefulWidget {
   const display({super.key});
@@ -7,18 +8,49 @@ class display extends StatefulWidget {
   State<display> createState() => _displayState();
 }
 
+Questions tquestion = Questions();
+
 class _displayState extends State<display> {
+  List<Widget> ScoreKeeper = [];
+  int score = 0;
+  void CheckAnswer(String userPickedAnswer) {
+    String correctAnswer = tquestion.getQuestinAnswer().toString();
+    int mark = tquestion.total;
+    String des;
+    if (score < 6) {
+      des = "You Failed";
+    } else {
+      des = "You Passed";
+    }
+    ;
+    setState(() {
+      tquestion.nextQuestion();
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text(
-        " Practice answering common interview question ",
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          color: Color.fromARGB(122, 172, 66, 122),
-          fontFamily: 'SourceSansPro - Regular',
-          fontWeight: FontWeight.w200,
-        ),
+      color: Colors.white,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: <Widget>[
+          Expanded(
+            flex: 5,
+            child: Padding(
+              padding: EdgeInsets.all(10.0),
+              child: Center(
+                child: Text(
+                  tquestion.getQuestionBank().toString(),
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      fontSize: 25.0, color: Color.fromARGB(255, 65, 0, 35)),
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
