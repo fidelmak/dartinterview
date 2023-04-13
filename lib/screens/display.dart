@@ -12,7 +12,7 @@ class _displayState extends State<display> {
   Widget build(BuildContext context) {
     return Container(
       child: Text(
-        " Practice answering common interview questions ",
+        " Practice answering common interview question ",
         textAlign: TextAlign.center,
         style: TextStyle(
           color: Color.fromARGB(122, 172, 66, 122),
