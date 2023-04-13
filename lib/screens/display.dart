@@ -30,27 +30,31 @@ class _displayState extends State<display> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
-          Expanded(
-            flex: 5,
-            child: Padding(
-              padding: EdgeInsets.all(10.0),
-              child: Center(
-                child: Text(
-                  tquestion.getQuestionBank().toString(),
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      fontSize: 25.0, color: Color.fromARGB(255, 65, 0, 35)),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      debugShowMaterialGrid: false,
+      home: Container(
+        color: Colors.white,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            Expanded(
+              flex: 5,
+              child: Padding(
+                padding: EdgeInsets.all(10.0),
+                child: Center(
+                  child: Text(
+                    tquestion.getQuestionBank().toString(),
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontSize: 25.0, color: Color.fromARGB(255, 65, 0, 35)),
+                  ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

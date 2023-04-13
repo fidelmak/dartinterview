@@ -17,6 +17,7 @@ class dartinterview extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      debugShowMaterialGrid: false,
       title: 'Dartinterview',
       theme: ThemeData(
         textTheme: myFonts,
