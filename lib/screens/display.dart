@@ -13,8 +13,12 @@ Questions tquestion = Questions();
 class _displayState extends State<display> {
   List<Widget> ScoreKeeper = [];
   int score = 0;
+  String correctAnswer = tquestion.getQuestinAnswer().toString();
+  String choice = tquestion.getChoicer().toString();
+  String first = tquestion.first().toString();
+  String second = tquestion.second().toString();
+
   void CheckAnswer(String userPickedAnswer) {
-    String correctAnswer = tquestion.getQuestinAnswer().toString();
     int mark = tquestion.total;
     String des;
     if (score < 6) {
@@ -23,6 +27,13 @@ class _displayState extends State<display> {
       des = "You Passed";
     }
     ;
+
+    if (userPickedAnswer == correctAnswer) {
+      setState(() {
+        score++;
+      });
+    }
+
     setState(() {
       tquestion.nextQuestion();
     });
@@ -30,10 +41,8 @@ class _displayState extends State<display> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      debugShowMaterialGrid: false,
-      home: Container(
+    return Scaffold(
+      body: Container(
         color: Colors.white,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -53,6 +62,35 @@ class _displayState extends State<display> {
                 ),
               ),
             ),
+            // Expanded(
+            //   child: Padding(
+            //     padding: EdgeInsets.all(15.0),
+            //     child: TextButton(
+            //       onPressed: () {
+            //         CheckAnswer(choice);
+            //       },
+            //       style: TextButton.styleFrom(
+            //           foregroundColor: Colors.white,
+            //           padding: const EdgeInsets.all(16.0),
+            //           textStyle: const TextStyle(fontSize: 20),
+            //           backgroundColor: Colors.green),
+            //       child: Text(first),
+            //     ),
+            //   ),
+            // ),
+            SizedBox(height: 16.0),
+            // Display the answer options
+            ...tquestion
+                .getChoicer()
+                .map((choice) => ElevatedButton(
+                      child: Text(choice),
+                      onPressed: () => CheckAnswer(choice),
+                    ))
+                .toList(),
+
+            SizedBox(
+              height: 30,
+            )
           ],
         ),
       ),

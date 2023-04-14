@@ -7,14 +7,14 @@ class Questions {
   final List<Question> questions = [
     Question(
         questionText: "who killed James?",
-        choice: ['paul', 'ben'],
+        choice: ['paul', 'mann'],
+        questionAnswer: 'paul'),
+    Question(
+        questionText: "who killed paul?",
+        choice: ['mhn', 'hjh'],
         questionAnswer: 'ben'),
     Question(
-        questionText: "who killed James?",
-        choice: ['paul', 'ben'],
-        questionAnswer: 'ben'),
-    Question(
-        questionText: "who killed James?",
+        questionText: "who killed john?",
         choice: ['paul', 'ben'],
         questionAnswer: 'ben'),
   ];
@@ -37,6 +37,16 @@ class Questions {
 
   List<String> getChoicer() {
     return questions[_questionNumber].choice;
+  }
+
+  String first() {
+    var mainn = questions[_questionNumber].choice;
+    return mainn[0];
+  }
+
+  String second() {
+    var mainn = questions[_questionNumber].choice;
+    return mainn[1];
   }
 
   bool isFinished() {
