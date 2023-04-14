@@ -78,14 +78,23 @@ class _displayState extends State<display> {
             //     ),
             //   ),
             // ),
-            SizedBox(height: 16.0),
+
             // Display the answer options
             ...tquestion
                 .getChoicer()
-                .map((choice) => ElevatedButton(
-                      child: Text(choice),
-                      onPressed: () => CheckAnswer(choice),
-                    ))
+                .map((choice) => Expanded(
+                        child: Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: TextButton(
+                        onPressed: () => CheckAnswer(choice),
+                        style: TextButton.styleFrom(
+                            foregroundColor: Colors.white,
+                            padding: const EdgeInsets.all(16.0),
+                            textStyle: const TextStyle(fontSize: 20),
+                            backgroundColor: Colors.green),
+                        child: Text(choice),
+                      ),
+                    )))
                 .toList(),
 
             SizedBox(
