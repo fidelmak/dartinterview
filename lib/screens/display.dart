@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:dartinterview/model/questions.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
 
 class display extends StatefulWidget {
   const display({super.key});
@@ -35,6 +36,35 @@ class _displayState extends State<display> {
     }
 
     setState(() {
+      if (tquestion.isFinished() == true) {
+        Alert(
+          style: AlertStyle(
+              descStyle: TextStyle(
+                color: Colors.pink.shade900,
+              ),
+              titleStyle: TextStyle(
+                color: Colors.pink.shade900,
+              ) // change desc text color here
+              ),
+          context: context,
+          title: " $des",
+          desc: "Your Score is : $score / $mark,",
+          buttons: [
+            DialogButton(
+              child: Text(
+                "Try Again",
+                style: TextStyle(color: Colors.white, fontSize: 20),
+              ),
+              onPressed: () => Navigator.pop(context),
+              color: Colors.pink.shade900,
+              radius: BorderRadius.circular(0.0),
+            ),
+          ],
+        ).show();
+        tquestion.reset();
+        // ScoreKeeper = [];
+      }
+
       tquestion.nextQuestion();
     });
   }
@@ -42,6 +72,20 @@ class _displayState extends State<display> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 40,
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/home');
+            },
+            icon: Icon(Icons.home),
+          )
+        ],
+        title: Text('DartInterview ', style: TextStyle(color: Colors.white)),
+        backgroundColor: Colors.pink.shade900,
+        elevation: 0.0,
+      ),
       body: Container(
         color: Colors.white,
         child: Column(
@@ -88,10 +132,11 @@ class _displayState extends State<display> {
                       child: TextButton(
                         onPressed: () => CheckAnswer(choice),
                         style: TextButton.styleFrom(
-                            foregroundColor: Colors.white,
-                            padding: const EdgeInsets.all(16.0),
-                            textStyle: const TextStyle(fontSize: 20),
-                            backgroundColor: Colors.green),
+                          foregroundColor: Colors.white,
+                          padding: const EdgeInsets.all(16.0),
+                          textStyle: const TextStyle(fontSize: 20),
+                          backgroundColor: Colors.pink.shade900,
+                        ),
                         child: Text(choice),
                       ),
                     )))

@@ -24,7 +24,7 @@ class _interviewState extends State<interview> {
             icon: Icon(Icons.menu_book_rounded),
           )
         ],
-        title: Text('Choose a stack ', style: TextStyle(color: Colors.white)),
+        title: Text('DartInterview ', style: TextStyle(color: Colors.white)),
         backgroundColor: Colors.pink.shade900,
         elevation: 0.0,
       ),
