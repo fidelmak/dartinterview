@@ -7,7 +7,11 @@ class Questions {
   final List<Question> questions = [
     Question(
         questionText: "What is Dart?",
-        choice: ['From 0 to 10', 'From 1 to 20', 'From 1 to 6'],
+        choice: [
+          'Dart is a object-oriented programming language',
+          'Dart is used to create a frontend user interfaces',
+          'Both of the above'
+        ],
         questionAnswer: 'paul'),
     Question(
         questionText: "who killed paul?",

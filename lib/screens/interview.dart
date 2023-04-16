@@ -50,7 +50,7 @@ class _interviewState extends State<interview> {
                   " Practice answering common interview questions ",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: Color.fromARGB(122, 172, 66, 122),
+                    color: Color.fromARGB(255, 138, 2, 74),
                     fontFamily: 'SourceSansPro - Regular',
                     fontWeight: FontWeight.w200,
                   ),
@@ -58,7 +58,7 @@ class _interviewState extends State<interview> {
               ),
               SizedBox(height: 10),
               Container(
-                width: 170,
+                width: 200,
                 height: 50,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
