@@ -61,6 +61,8 @@ class _displayState extends State<display> {
             ),
           ],
         ).show();
+
+        //Navigator.pushNamed(context, '/home');
         tquestion.reset();
         // ScoreKeeper = [];
       }
@@ -133,7 +135,7 @@ class _displayState extends State<display> {
                         onPressed: () => CheckAnswer(choice),
                         style: TextButton.styleFrom(
                           foregroundColor: Colors.white,
-                          padding: const EdgeInsets.all(16.0),
+                          padding: const EdgeInsets.all(8.0),
                           textStyle: const TextStyle(fontSize: 20),
                           backgroundColor: Colors.pink.shade900,
                         ),

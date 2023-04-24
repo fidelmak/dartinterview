@@ -52,7 +52,8 @@ class _interviewState extends State<interview> {
                   style: TextStyle(
                     color: Color.fromARGB(255, 138, 2, 74),
                     fontFamily: 'SourceSansPro - Regular',
-                    fontWeight: FontWeight.w200,
+                    fontWeight: FontWeight.w300,
+                    fontSize: 20,
                   ),
                 ),
               ),

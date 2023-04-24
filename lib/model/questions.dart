@@ -6,21 +6,58 @@ class Questions {
 
   final List<Question> questions = [
     Question(
-        questionText: "What is Dart?",
-        choice: [
-          'Dart is a object-oriented programming language',
-          'Dart is used to create a frontend user interfaces',
-          'Both of the above'
-        ],
-        questionAnswer: 'paul'),
+      questionText: "What is Dart?",
+      choice: [
+        'Dart is a object-oriented programming language',
+        'Dart is used to create a frontend user interfaces',
+        'Both of the above'
+      ],
+      questionAnswer: 'Dart is a object-oriented programming language',
+    ),
     Question(
-        questionText: "who killed paul?",
-        choice: ['mhn', 'hjh'],
-        questionAnswer: 'ben'),
+        questionText: "What is the most popular programming language in 2021?",
+        choice: ['Java', 'Python', 'C#'],
+        questionAnswer: 'Python'),
     Question(
-        questionText: "who killed john?",
-        choice: ['paul', 'ben', 'roger'],
-        questionAnswer: 'ben'),
+        questionText:
+            "Which data structure uses First-In-First-Out (FIFO) methodology?",
+        choice: ['Stack', 'Queue', 'Linked List'],
+        questionAnswer: 'Queue'),
+    Question(
+        questionText:
+            "Which data structure uses First-In-First-Out (FIFO) methodology?",
+        choice: ['Stack', 'Queue', 'Linked List'],
+        questionAnswer: 'Queue'),
+    Question(
+        questionText:
+            "Which data structure uses First-In-First-Out (FIFO) methodology?",
+        choice: ['Stack', 'Queue', 'Linked List'],
+        questionAnswer: 'Queue'),
+    Question(
+        questionText:
+            "Which data structure uses First-In-First-Out (FIFO) methodology?",
+        choice: ['Stack', 'Queue', 'Linked List'],
+        questionAnswer: 'Queue'),
+    Question(
+        questionText:
+            "Which data structure uses First-In-First-Out (FIFO) methodology?",
+        choice: ['Stack', 'Queue', 'Linked List'],
+        questionAnswer: 'Queue'),
+    Question(
+        questionText:
+            "Which data structure uses First-In-First-Out (FIFO) methodology?",
+        choice: ['Stack', 'Queue', 'Linked List'],
+        questionAnswer: 'Queue'),
+    Question(
+        questionText:
+            "Which data structure uses First-In-First-Out (FIFO) methodology?",
+        choice: ['Stack', 'Queue', 'Linked List'],
+        questionAnswer: 'Queue'),
+    Question(
+        questionText:
+            "Which data structure uses First-In-First-Out (FIFO) methodology?",
+        choice: ['Stack', 'Queue', 'Linked List'],
+        questionAnswer: 'Queue'),
   ];
 
   int get total => questions.length;
@@ -66,4 +103,6 @@ class Questions {
   void reset() {
     _questionNumber = -1;
   }
+
+  void back() {}
 }

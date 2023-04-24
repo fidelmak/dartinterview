@@ -14,9 +14,9 @@ class _sliderState extends State<slider> {
   @override
   Widget build(BuildContext context) {
     List<String> imagesList = [
-      'images/sus1.svg',
-      'images/sus2.svg',
-      'images/sus3.svg',
+      'assets/images/sus1.svg',
+      'assets/images/sus2.svg',
+      'assets/images/sus3.svg',
     ];
     return Container(
       height: 200,
