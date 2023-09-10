@@ -9,6 +9,14 @@ built during her tutorial.
 the design and graphics was done by Paul Fidelis
 # core tips
 flutter Listview, expanded widget,async,OOP, route and basic flutter concepts
+
+
+# Interact with the App 
+
+https://appetize.io/app/qelcobjsjpwet5qrxin3bbes4e?device=pixel4&osVersion=11.0&scale=75
+
+
+
 # screenshots 
 ![Screenshot_20230425-181020_1](https://github.com/fidelmak/dartinterview/assets/64453973/33ca54b1-48a8-4f62-9d60-0edbc09d3cf0)
 
