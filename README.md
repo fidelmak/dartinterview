@@ -1,6 +1,5 @@
 # dartinterview
-this application
-is a mobile quiz application focus mainly on dart programming language
+DartInterview is an exceptional mobile quiz application dedicated to honing Dart programming skills. The app's user-friendly interface and comprehensive question bank make it a standout choice for anyone aiming to master Dart. With thoughtfully crafted questions and detailed explanations, it's the perfect companion for learning and refining Dart programming expertise. Whether you're a beginner or an experienced developer, DartInterview is your go-to tool for staying sharp and staying ahead in the world of Dart programming
 # language and framework
 this application was built using flutter and dart
 # inspiration
